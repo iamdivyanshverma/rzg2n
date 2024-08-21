@@ -1,0 +1,57 @@
+// SPDX-License-Identifier: GPL-2.0
+/*
+ * Device Tree Source for the HiHope RZ/G2N Rev.3.0/4.0 connected to
+ * sub board
+ *
+ * Copyright (C) 2020 Renesas Electronics Corp.
+ */
+
+#include "r8a774b1-hihope-rzg2n.dts"
+#include "hihope-rzg2-ex.dtsi"
+
+/ {
+	model = "HopeRun HiHope RZ/G2N with sub board";
+	compatible = "hoperun,hihope-rzg2-ex", "hoperun,hihope-rzg2n",
+		     "renesas,r8a774b1";
+};
+
+/* Set SW43 = ON and SW1001[7] = OFF for SATA port to be activated */
+&sata {
+	status = "okay";
+};
+
+/* Set SW43 = OFF and SW1001[7] = ON for PCIE1 port to be activated */
+&pciec1 {
+	status = "okay";
+};
+&avb {
+        status = "okay";
+        pinctrl-names = "default";
+        phy-handle = <&phy1>;
+        phy-mode = "rgmii-id";
+        phy1: phy@3 {
+//              rxc-skew-ps = <3000>;
+//              rxdv-skew-ps = <0>;
+//              txc-skew-ps = <3000>;
+//              txen-skew-ps = <0>;
+//              compatible = "ethernet-phy-ieee802.3-c22";
+//              compatible = "ethernet-phy-id0022.1640\0ethernet-phy-ieee802.3-c22";
+//              compatible = "ethernet-phy-id0022.1640",
+                compatible = "ethernet-phy-id001c.c915",
+                             "ethernet-phy-ieee802.3-c22";
+                reg = <0x3>;
+                rxc-skew-psec = <0x2400>;
+                txc-skew-psec = <0x2400>;
+                rxdv-skew-psec = <0x00>;
+                txdv-skew-psec = <0x00>;
+                rxd0-skew-psec = <0x00>;
+                rxd1-skew-psec = <0x00>;
+                rxd2-skew-psec = <0x00>;
+                rxd3-skew-psec = <0x00>;
+                txd0-skew-psec = <0x00>;
+                txd1-skew-psec = <0x00>;
+                txd2-skew-psec = <0x00>;
+                txd3-skew-psec = <0x00>;
+        };
+};
+

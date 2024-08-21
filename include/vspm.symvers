@@ -1,0 +1,5 @@
+0x00000000	vspm_get_status	/home/nags/Workarea/rzg2n-303/user_work/build/tmp/work/hihope_rzg2n-poky-linux/kernel-module-vspm/1.0-r0/git/vspm-module/files/vspm/drv/vspm	EXPORT_SYMBOL	
+0x00000000	vspm_quit_driver	/home/nags/Workarea/rzg2n-303/user_work/build/tmp/work/hihope_rzg2n-poky-linux/kernel-module-vspm/1.0-r0/git/vspm-module/files/vspm/drv/vspm	EXPORT_SYMBOL	
+0x00000000	vspm_cancel_job	/home/nags/Workarea/rzg2n-303/user_work/build/tmp/work/hihope_rzg2n-poky-linux/kernel-module-vspm/1.0-r0/git/vspm-module/files/vspm/drv/vspm	EXPORT_SYMBOL	
+0x00000000	vspm_entry_job	/home/nags/Workarea/rzg2n-303/user_work/build/tmp/work/hihope_rzg2n-poky-linux/kernel-module-vspm/1.0-r0/git/vspm-module/files/vspm/drv/vspm	EXPORT_SYMBOL	
+0x00000000	vspm_init_driver	/home/nags/Workarea/rzg2n-303/user_work/build/tmp/work/hihope_rzg2n-poky-linux/kernel-module-vspm/1.0-r0/git/vspm-module/files/vspm/drv/vspm	EXPORT_SYMBOL	
